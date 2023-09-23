@@ -98,14 +98,6 @@ namespace NoviceChallenges
             {
                 if (number % i == 0) return false;
             }
-            // TODO: Return the correct boolean value. i
-            for (int i = 1; i <= number; i++)
-            {
-                if (number % i == 0)
-                {
-                    return true;
-                }
-            }
             return false;
         }
 
@@ -205,7 +197,6 @@ namespace NoviceChallenges
             char firstChar = s[0];
             char lastChar = s[s.Length - 1];
             string middleChars = s.Substring(1, s.Length - 2);
-
 
             // TODO: Swap the first and last characters and return the modified string.
             return lastChar + middleChars + firstChar;

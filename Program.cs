@@ -23,28 +23,18 @@ namespace NoviceChallenges
             // Console.WriteLine(CharCount("Prolly cop a script o roxy oddy kinda sloppy", 'p'));
             //   Console.WriteLine(ConcatenateStrings("Hello, yesterday", "i went to the store"));
             Console.WriteLine(SwapEnds("this isn't cool"));
-
         }
 
         // 1. Return the sum of two numbers.
         public static int Add(int a, int b)
         {
-            int sum = a + b;
-            return sum;
+            return a + b;
         }
 
         // 2. Given an integer, return true if it's even, else return false.
         public static bool IsEven(int number)
         {
-            // TODO: Implement this method.
-            if (number >= 1)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return number % 2 == 0;
         }
 
         // 3. Return the largest of three numbers.
@@ -72,14 +62,8 @@ namespace NoviceChallenges
         // 5. Return true if the string starts with "Hello", otherwise return false.
         public static bool StartsHello(string s)
         {
-            // HINT: Use the string method "StartsWith".
-            // TODO: Implement this method.
-            if (s.StartsWith("Hello"))
-            {
-                return true;
-            }
-
-            return false;
+            // Using ToLower() first will ensure you handle things like "Hello", "HELLO", "HEllo" etc
+            return s.ToLower().StartsWith("hello");
         }
 
         // 6. Reverse a given string.
@@ -99,9 +83,8 @@ namespace NoviceChallenges
             // TODO: Calculate the factorial.
             while (n != 1)
             {
-                result = result * n;
+                result *= n;
                 n--;
-
             }
             return result;
         }
@@ -114,14 +97,6 @@ namespace NoviceChallenges
             for (int i = 2; i < number; i++)
             {
                 if (number % i == 0) return false;
-            }
-            // TODO: Return the correct boolean value. i
-            for (int i = 1; i <= number; i++)
-            {
-                if (number % i == 0)
-                {
-                    return true;
-                }
             }
             return false;
         }
@@ -184,7 +159,6 @@ namespace NoviceChallenges
         {
             int sum = 0;
 
-
             // TODO: Calculate the sum of the array's elements.
             foreach (int number in numbers)
             {
@@ -213,8 +187,7 @@ namespace NoviceChallenges
         public static string ConcatenateStrings(string str1, string str2)
         {
             // TODO: Concatenate the two strings with a space in between.
-            string full = str1 + " " + str2;
-            return full;
+            return str1 + " " + str2;
         }
 
         // 15. Given a string, return a new string where the first and last characters have been swapped.
@@ -225,9 +198,8 @@ namespace NoviceChallenges
             char lastChar = s[s.Length - 1];
             string middleChars = s.Substring(1, s.Length - 2);
 
-           
             // TODO: Swap the first and last characters and return the modified string.
-            return lastChar + middleChars + firstChar ;
+            return lastChar + middleChars + firstChar;
         }
     }
 }
